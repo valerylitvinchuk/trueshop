@@ -1,0 +1,23 @@
+{
+  "name": "True Shop",
+  "description": "LoftSchool Project #2",
+  "main": "gulpfile.js",
+  "authors": [
+    "Valery Litvinchuk"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/valerylitvinchuk/trueshop",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "- dev/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-ui": "~1.11.4",
+    "select2": "~4.0.1"
+  }
+}

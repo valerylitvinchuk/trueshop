@@ -18,9 +18,15 @@
 	@include inlineblock(middle);
 }
 
+.sort__select--wrap {
+	vertical-align: middle;
+	margin-left: 21px;
+}
+
 .sort__left {
 	float: left;
 	width: 50%;
+	line-height: 50px;
 }
 
 .sort__right {
@@ -40,6 +46,14 @@
 .sort__view-item {
 	float: left;
 	border-left: 1px solid $grey;
+
+	&.active {
+		&.sort__view-icon {
+			&:before {
+				color: #5f676f;
+			}
+		}
+	}
 }
 
 .sort__view-link {
@@ -56,4 +70,12 @@
 	@include absolute-center;
 	vertical-align: middle;
 	color: #aabac2;
+
+	&:hover {
+		color: #5f676f;
+	}
+
+	&.active {
+		color: #5f676f;
+	}
 }

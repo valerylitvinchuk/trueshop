@@ -5,6 +5,7 @@
 	&:before {
 		content: '>';
 		@include inlineblock(middle);
+		margin-right: 4px;
 	}
 
 	&:first-child {

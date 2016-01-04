@@ -1,6 +1,38 @@
-required: ruby;
+# Второй выпускной проект LoftSchool
+## Для установки приложения выполните следующие команды
 
-1. gem install compass
-2. gem install sass-globbing
-3. npm install
-4. gulp
+> Клонируйте текущий репозиторий
+
+```
+ $ git clone https://github.com/valerylitvinchuk/shop.git shop
+```
+> Перейдите в папку
+
+```
+ $ cd shop
+```
+> Установите **bower**
+
+```
+ $ bower install
+```
+> Установите **compass**
+
+```
+ $ gem install compass
+```
+> Установите **sass**
+
+```
+ $ gem install sass-globbing
+```
+> Установите **npm**
+
+```
+ $ npm install
+```
+> Запустите **gulp**
+
+```
+ $ gulp
+```

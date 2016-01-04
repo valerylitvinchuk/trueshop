@@ -7,8 +7,8 @@
 }
 
 .pagination__item {
-	width: 26px;
-	height: 26px;
+	width: 24px;
+	height: 23px;
 	@include inlineblock();
 	@include border-radius(3px);
 	border: 1px solid $grey;

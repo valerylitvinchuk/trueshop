@@ -34,7 +34,7 @@ block content
 											a(href="#").sort__view-link
 												div(class="sort__view-icon icon-#{item}")
 					.products
-						ul.products__list.products__list_lines
+						ul.products__list#products-list
 							- for (var i = 0; i < 9; i++)
 								li.products__item
 									.products__item-inner
@@ -52,7 +52,7 @@ block content
 													.products__article-word Артикул
 													.products__article-num 189238
 											.products__desc
-												.products__desc-title Samsung FT-I9301I Galaxy S3
+												.products__desc-title Samsung FT-I9301I Galaxy S 3
 												ul.products__desc-options
 													-
 														var options = {
@@ -69,7 +69,7 @@ block content
 														li(class="products__option-item" + (!(index++ % 2) ? " products__option-item_colored" : ""))
 															.products__option-key= item
 															.products__option-value= options[item]
-												.products__rating
+												div(class="products__rating" data-rating="3")
 													ul.products__rating-stars
 														li.products__rating-stars-item.products__rating-stars-item_filled.icon-star
 														li.products__rating-stars-item.products__rating-stars-item_filled.icon-star

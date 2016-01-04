@@ -6,12 +6,14 @@
 
 .header__top {
 	border-bottom: 1px solid #ebedef;
-	padding: 23px 0;
+	padding: 25px 0;
 }
 
 .socials__item {
 	@include inlineblock(middle);
 	margin-left: 12px;
+	vertical-align: middle;
+	text-align: center;
 
 	&:first-child {
 		margin-left: 0;
@@ -30,6 +32,7 @@
 .socials__icon {
 	@include absolute-center;
 	color: #fff;
+	line-height: 26px;
 
 	&:hover {
 		color: #55acee;
@@ -44,12 +47,15 @@
 
 .header__right {
 	width: 50%;
+	max-width: 480px;
 	float: right;
 }
 
 .address {
 	@include inlineblock(middle);
-	margin-right: 65px;
+	margin-right: 75px;
+	font-size: 14px;
+	line-height: 16px;
 
 	&:before {
 		@include inlineblock(middle);
@@ -61,7 +67,9 @@
 	@include inlineblock(middle);
 	color: $black;
 	text-decoration: none;
-	margin-right: 25px;
+	font-size: 18px;
+	line-height: 20px;
+	@include open-sans(semibold);
 
 	&:before {
 		@include inlineblock(middle);
