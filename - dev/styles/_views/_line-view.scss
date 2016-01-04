@@ -1,0 +1,29 @@
+.products__list_lines {
+	.products__slideshow-block {
+		display: none;
+	}
+
+	.products__desc-options {
+		display: none;
+	}
+
+	.products__rating {
+		display: none;
+	}
+
+	.products__right {
+		float: right;
+		position: static;
+		width: auto;
+	}
+
+	.products__info {
+		border: 0 none;
+		padding-left: 0;
+		@include inlineblock(middle);
+	}
+
+	.products__info-bottom {
+		position: static;
+	}
+}

@@ -14,8 +14,89 @@ block content
 
 				.content
 					.sort
+						.sort__left
+							.sort__select--wrap
+								.sort__title
+									| Сортировать по
+								.sort__select
+									select.sort__select-elem
+										- var options = ["по цене", "по популярности"]
+										each option in options
+											option(value="")= option
+						.sort__right
+							.sort__title
+								| Вид каталога
+							.sort__view
+								ul.sort__view-list
+									- var items = ['rows', 'grids', 'lines']
+									each item in items
+										li(class="sort__view-item sort__view-" + item data-view= item)
+											a(href="#").sort__view-link
+												div(class="sort__view-icon icon-#{item}")
 					.products
-						
+						ul.products__list.products__list_lines
+							- for (var i = 0; i < 9; i++)
+								li.products__item
+									.products__item-inner
+										.products__left
+											.products__slideshow
+												.products__slideshow-block
+													a(href="#").products__slideshow-display
+														img(src="http://placehold.it/200x200" alt="").products__slideshow-img
+													ul.products__slideshow-thumbs
+														- for (var j = 0; j < 3; j++)
+															li.products__slideshow-item
+																a(href="#").products__slideshow-link
+																	img(src="http://placehold.it/45x45" alt="").products__slideshow-thumb-img
+												.products__article
+													.products__article-word Артикул
+													.products__article-num 189238
+											.products__desc
+												.products__desc-title Samsung FT-I9301I Galaxy S3
+												ul.products__desc-options
+													-
+														var options = {
+															'Тип SIM-карты' : 'Micro-SIM',
+															'Количество SIM-карт' : '1',
+															'Цвет' : 'Белый',
+															'ОС' : 'Android',
+															'Связь 3G' : 'Есть',
+															'4G (LTE)' : 'Нет',
+															'GPS-модуль' : 'Есть'
+														}
+													- var index = 0;
+													- for (item in options)
+														li(class="products__option-item" + (!(index++ % 2) ? " products__option-item_colored" : ""))
+															.products__option-key= item
+															.products__option-value= options[item]
+												.products__rating
+													ul.products__rating-stars
+														li.products__rating-stars-item.products__rating-stars-item_filled.icon-star
+														li.products__rating-stars-item.products__rating-stars-item_filled.icon-star
+														li.products__rating-stars-item.products__rating-stars-item_filled.icon-star
+														li.products__rating-stars-item.icon-star-empty
+														li.products__rating-stars-item.icon-star-empty
+													.products__rating-amount 3
+										.products__right
+											.products__info
+												.products__price 11 290
+													i.rub.icon-rouble
+											.products__info-bottom
+												a(href="#").products__buy-btn В корзину
+												.products__availability
+													| В наличии
+					.pagination
+						ul.pagination__list
+							li.pagination__item.pagination__item_prev
+								a(href="#").pagination__link
+									.pagination__mark.icon-prev
+							- for (var i = 1; i < 4; i++)
+								li.pagination__item
+									a(href="#").pagination__link
+										.pagination__mark= i
+							li.pagination__item.pagination__item_prev
+								a(href="#").pagination__link
+									.pagination__mark.icon-next
 			.attension
 				.main-title
 					| Важная информация

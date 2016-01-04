@@ -1,0 +1,79 @@
+.footer {
+	background: url('/img/bg/footer_lodyas.png') center center;
+	position: relative;
+}
+
+.footer__top {
+	padding-top: 34px;
+}
+
+.footer__left {
+	width: 45%;
+	float: left;
+	padding-top: 34px;
+}
+
+.footer__right {
+	width: 55%;
+	float: left;
+	text-align: right;
+}
+
+.logo__footer {
+	.logo__img {
+		max-width: 255px;
+	}
+}
+
+.socials_footer {
+	margin-bottom: 21px;
+
+	.socials__link {
+		width: 45px;
+		height: 45px;
+		background: #fff;
+		display: block;
+		color: #333;
+	}
+
+	.socials__item {
+		margin-left: 26px;
+	}
+
+	.socials__icon {
+		color: #333;
+		font-size: 30px;
+	}
+}
+
+.footer__nav-item {
+	@include inlineblock();
+	margin-left: 33px;
+	margin-bottom: 15px;
+}
+
+.footer__nav-link {
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.footer__bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #494949;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.footer__copyright {
+	padding: 8px 0;
+}
