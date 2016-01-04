@@ -4,7 +4,7 @@
 > Клонируйте текущий репозиторий
 
 ```
- $ git clone https://github.com/valerylitvinchuk/shop.git shop
+ $ git clone https://github.com/valerylitvinchuk/trueshop.git shop
 ```
 > Перейдите в папку
 
