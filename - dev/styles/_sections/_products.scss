@@ -67,6 +67,12 @@
 .products__slideshow-item {
 	margin-left: 15px;
 	float: left;
+
+	&.active {
+		.products__slideshow-link {
+			border-color: $orange;
+		}
+	}
 }
 
 .products__slideshow-link {
@@ -76,6 +82,7 @@
 	@include border-radius(3px);
 	margin-bottom: 0;
 	position: relative;
+	outline: none !important;
 
 	&:hover {
 		border-color: $orange;

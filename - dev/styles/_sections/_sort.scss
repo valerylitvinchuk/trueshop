@@ -48,7 +48,7 @@
 	border-left: 1px solid $grey;
 
 	&.active {
-		&.sort__view-icon {
+		.sort__view-icon {
 			&:before {
 				color: #5f676f;
 			}

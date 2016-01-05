@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "jquery-ui": "~1.11.4",
-    "select2": "~4.0.1"
+    "select2": "~4.0.1",
+    "jquery.columnizer": "~1.6.2"
   }
 }

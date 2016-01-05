@@ -112,7 +112,7 @@ var ViewStateChange = (function(){
 
 	var _changeActiveClass = function($this) {
 		$this
-				.closest('.sort__view-icon').addClass('active')
+				.closest('.sort__view-item').addClass('active')
 				.siblings().removeClass('active');
 	}
 
@@ -126,7 +126,87 @@ var ViewStateChange = (function(){
 	}
 }());
 
+var addSelectArrow = (function(){
+
+	var selectArrowPlace = $('.select2-selection__arrow').find('b');
+
+	return {
+		init: function(){
+			selectArrowPlace.toggleClass('icon-down');
+			
+		}
+	}
+
+}());
+
+var Slideshow = (function(){
+
+	var _changeSlide = function($this){
+		var
+				container = $this.closest('.products__slideshow'),
+				path = $this.find('img').attr('src'),
+				display = container.find('.products__slideshow-img');
+
+		$this.closest('.products__slideshow-item').addClass('active')
+				.siblings().removeClass('active');
+
+		display.fadeOut(function() {
+			$(this).attr('src', path).fadeIn();
+		});
+	}
+
+	return {
+		init: function(){
+			$('.products__slideshow-link').on('click', function(e){
+				e.preventDefault();
+
+				var
+						$this = $(this);
+
+				_changeSlide($this);
+			});
+		}
+	}
+}());
+
+var Accordeon = (function(){
+	var _openSection = function($this){
+		var
+				container = $this.closest('.filter__item'),
+				content = container.find('.filter__content'),
+				otherContent = $this.closest('.filter').find('.filter__content');
+
+		if (!container.hasClass('active')) {
+			otherContent.slideUp().closest('.filter__item').removeClass('active');
+			container.addClass('active');
+			content.stop(true, true).slideDown();
+		} else {
+			container.removeClass('active');
+			content.stop(true, true).slideUp();
+		}
+
+		
+	}
+
+	return {
+		init: function(){
+			$('.filter__title-link').on('click', function(e) {
+				e.preventDefault();
+				_openSection($(this));
+			});
+		}
+	}
+}());
+
 $(document).ready(function() {
+
+	if ($('.filter').length) {
+		Accordeon.init();
+	}
+
+	if ($('.products__slideshow').length) {
+		Slideshow.init();
+	}
 
 	ViewStateChange.init();
 
@@ -142,6 +222,7 @@ $(document).ready(function() {
 			$('.sort__select-elem').select2({
 				minimumResultsForSearch: Infinity
 			});
+		addSelectArrow.init();
 	}
 
 	$('.filter__reset').on('click', function(e){
@@ -155,5 +236,11 @@ $(document).ready(function() {
 		checkboxes.each(function() {
 			$(this).removeProp('checked');
 		});
+	});
+
+	/* --------- filters --------- */
+
+	$('.attension__text').columnize({
+		width: 500
 	});
 });
