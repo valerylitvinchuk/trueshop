@@ -190,7 +190,7 @@ var Accordeon = (function(){
 
 	return {
 		init: function(){
-			$('.filter__title-link').on('click', function(e) {
+			$('.filter__title-wrapper').on('click', function(e) {
 				e.preventDefault();
 				_openSection($(this));
 			});

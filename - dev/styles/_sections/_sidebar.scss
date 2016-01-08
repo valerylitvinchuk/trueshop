@@ -70,6 +70,13 @@
 	}
 }
 
+.filter__title-wrapper {
+
+&:hover {
+		cursor: pointer;
+	}
+}
+
 .filter__title {
 	padding-right: 30px;
 	position: relative;

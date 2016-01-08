@@ -1,16 +1,16 @@
 <!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Главная страница (main.psd)</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Мобильные телефоны - CoolTech</title>
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="css/_vendors/fontello.css" media="screen, projection, print">
-		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic">
+		<link rel="stylesheet" type="text/css" href="css/_vendors/fontello.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="/js/_vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
 	<body>
@@ -24,16 +24,13 @@
 						<div class="container">
 							<div class="header__left">
 								<ul class="socials">
-									<li class="socials__item socials__item_fb"><a href="#" class="socials__link">
-											<div class="socials__icon icon-fb"></div></a></li>
-									<li class="socials__item socials__item_vk"><a href="#" class="socials__link">
-											<div class="socials__icon icon-vk"></div></a></li>
-									<li class="socials__item socials__item_tw"><a href="#" class="socials__link">
-											<div class="socials__icon icon-tw"></div></a></li>
+									<li class="socials__item socials__item_fb"><a href="#" class="socials__link"><i class="socials__icon icon-fb"></i></a></li>
+									<li class="socials__item socials__item_vk"><a href="#" class="socials__link"><i class="socials__icon icon-vk"></i></a></li>
+									<li class="socials__item socials__item_tw"><a href="#" class="socials__link"><i class="socials__icon icon-tw"></i></a></li>
 								</ul>
 							</div>
 							<div class="header__right">
-								<div class="address icon-location">ул. Маяковского 6, офис 17</div><a hreft="tel:+79211231312" class="phone icon-phone">+7 (921) 123-13-12</a>
+								<div class="address icon-location">ул. Маяковского 6, офис 17</div><a href="tel:+79211231312" class="phone icon-phone">+7 (921) 123-13-12</a>
 							</div>
 						</div>
 					</div>
@@ -42,8 +39,8 @@
 								<div class="logo__text">cooltech</div></a>
 							<div class="search">
 								<form class="search__form">
-									<input name="" type="text" placeholder="Что будем искать" class="search__form-input">
-									<input name="" type="submit" value="Найти" class="search__form-submit">
+									<input name="search__form-input" type="text" placeholder="Что будем искать" class="search__form-input">
+									<input name="search__form-submit" type="submit" value="Найти" class="search__form-submit">
 								</form>
 							</div>
 							<div class="menu">
@@ -71,10 +68,10 @@
 				</nav>
 				<div class="breadcrumbs">
 					<div class="container">
-						<div class="ul breadcrumbs__list">
+						<ul class="breadcrumbs__list">
 							<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
 							<li class="breadcrumbs__item active"><a href="#" class="breadcrumbs__link">Каталог</a></li>
-						</div>
+						</ul>
 					</div>
 				</div>
 				<article class="content-wrapper">
@@ -91,7 +88,9 @@
 								<div class="filter">
 									<ul class="filter__list">
 										<li class="filter__item">
-											<div class="filter__title"><a href="#" class="filter__title-link">Наличие в магазинах</a></div>
+											<div class="filter__title-wrapper">
+												<div class="filter__title"><a href="#" class="filter__title-link">Наличие в магазинах</a></div>
+											</div>
 											<div class="filter__content">
 												<ul class="filter__choose">
 													<li class="filter__choose-item">
@@ -112,7 +111,9 @@
 											</div>
 										</li>
 										<li class="filter__item">
-											<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
+											<div class="filter__title-wrapper">
+												<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
+											</div>
 											<div class="filter__content">
 												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
@@ -155,17 +156,19 @@
 											</div>
 										</li>
 										<li class="filter__item">
-											<div class="filter__title"><a href="#" class="filter__title-link">Цена</a></div>
+											<div class="filter__title-wrapper">
+												<div class="filter__title"><a href="#" class="filter__title-link">Цена</a></div>
+											</div>
 											<div class="filter__content">
 												<div class="filter__slider">
 													<div class="filter__slider-displays">
 														<div class="filter__slider-left">
 															<div class="filter__slider-text">от</div>
-															<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_from">
+															<input name="filter__slider-input_from" type="text" placeholder="" class="filter__slider-input filter__slider-input_from">
 														</div>
 														<div class="filter__slider-right">
 															<div class="filter__slider-text">до</div>
-															<input name="" type="text" placeholder="" class="filter__slider-input filter__slider-input_to">
+															<input name="filter__slider-input_to" type="text" placeholder="" class="filter__slider-input filter__slider-input_to">
 														</div>
 													</div>
 													<div data-min="0" data-max="30000" class="filter__slider-element"></div>
@@ -173,7 +176,9 @@
 											</div>
 										</li>
 										<li class="filter__item">
-											<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
+											<div class="filter__title-wrapper">
+												<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
+											</div>
 											<div class="filter__content">
 												<ul class="filter__colors">
 													<li class="filter__colors-item"><a href="#" style="background-color: #fff" class="filter__colors-link"></a></li>
@@ -192,7 +197,9 @@
 											</div>
 										</li>
 										<li class="filter__item">
-											<div class="filter__title"><a href="#" class="filter__title-link">Операционные системы</a></div>
+											<div class="filter__title-wrapper">
+												<div class="filter__title"><a href="#" class="filter__title-link">Операционные системы</a></div>
+											</div>
 											<div class="filter__content">
 												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
@@ -936,12 +943,9 @@
 							<div class="logo__text">cooltech</div></a></div>
 					<div class="footer__right">
 						<ul class="socials socials_footer">
-							<li class="socials__item socials__item_fb"><a href="#" class="socials__link">
-									<div class="socials__icon icon-fb"></div></a></li>
-							<li class="socials__item socials__item_vk"><a href="#" class="socials__link">
-									<div class="socials__icon icon-vk"></div></a></li>
-							<li class="socials__item socials__item_tw"><a href="#" class="socials__link">
-									<div class="socials__icon icon-tw"></div></a></li>
+							<li class="socials__item socials__item_fb"><a href="#" class="socials__link"><i class="socials__icon icon-fb"></i></a></li>
+							<li class="socials__item socials__item_vk"><a href="#" class="socials__link"><i class="socials__icon icon-vk"></i></a></li>
+							<li class="socials__item socials__item_tw"><a href="#" class="socials__link"><i class="socials__icon icon-tw"></i></a></li>
 						</ul>
 						<ul class="footer__nav">
 							<li class="footer__nav-item"><a href="#" class="footer__nav-link">Планшеты</a></li>
